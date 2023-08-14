@@ -1,0 +1,23 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+      <div *ngIf="showFiller">
+        <a  routerLinkActive="active" routerLink="/placeholders" class="item">Placeholder</a>
+        <br>
+        <a  routerLinkActive="active" routerLink="/tables" class="item">Tables</a>
+
+      </div>
+
+      
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" style="color:black" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  
+  </mat-drawer-container>
